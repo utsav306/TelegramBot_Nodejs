@@ -1,6 +1,20 @@
 import TelegramBot from 'node-telegram-bot-api';
 import Bard from 'bard-ai';
 
+
+import express from 'express';
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
 // Replace with your Telegram bot token and Bard API token
 const botToken = '5418101414:AAGxGL7ihpb9PDD83KyQp4ZeSetDomw_F_A';
 const bardToken = 'fQjI_Gq22iYSEDFiNubdeoi6OPyXVOWUgusopye38cC3hGCnhAS9U9zdNQj7yHM5OnamLg.';
